@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотогалерея</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Фотогалерея природних ландшафтів</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про екологію</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="ecosystems.html">Екосистеми</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="images/3.jpg" alt="Ліс" onclick="openLightbox(this)">
+                <p>Зелений ліс навесні</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/4.jpg" alt="Гори" onclick="openLightbox(this)">
+                <p>Гірський масив на заході сонця</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/5.jpg" alt="Річка" onclick="openLightbox(this)">
+                <p>Кришталево чиста річка в долині</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/6.jpg" alt="Океан" onclick="openLightbox(this)">
+                <p>Бірюзові води океану</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/7.jpg" alt="Пустеля" onclick="openLightbox(this)">
+                <p>Піщані дюни під палючим сонцем</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/8.jpg" alt="Тундра" onclick="openLightbox(this)">
+                <p>Дика тундра в Північній Європі</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <footer>
+        <p>© 2025 Екологія та природа</p>
+    </footer>
+
+    <script>
+        function openLightbox(img) {
+            document.getElementById("lightbox").style.display = "flex";
+            document.getElementById("lightbox-img").src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
